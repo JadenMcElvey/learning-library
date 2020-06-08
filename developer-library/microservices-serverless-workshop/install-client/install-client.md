@@ -245,14 +245,14 @@ Now let’s configure access to oci tenancy via ocicli with our tenancy details.
 
   You can proceed to the next lab.
 
-  ## Want to Learn More?
+## Want to Learn More?
 
-  * [Oracle VirtualBox Documentation](https://www.virtualbox.org/wiki/Documentation)
-  * [Docker Documentation](https://docs.docker.com/)
+* [Oracle VirtualBox Documentation](https://www.virtualbox.org/wiki/Documentation)
+* [Docker Documentation](https://docs.docker.com/)
 
-  ## Acknowledgements
-  * **Authors** -  Iván Postigo, Jesus Guerra, Carlos Olivares - Oracle Spain SE Team
-  * **Contributors** - Jaden McElvey Technical Lead Oracle LiveLabs
-  * **Last Updated By/Date** - Tom McGinn, May 2020
+## Acknowledgements
+* **Authors** -  Iván Postigo, Jesus Guerra, Carlos Olivares - Oracle Spain SE Team
+* **Contributors** - Jaden McElvey Technical Lead Oracle LiveLabs Intern
+* **Last Updated By/Date** - Tom McGinn, May 2020
 
-  See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues). Please include the workshop name and lab in your request.
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues). Please include the workshop name and lab in your request.
