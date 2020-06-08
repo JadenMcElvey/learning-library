@@ -252,6 +252,7 @@ Now let’s configure access to oci tenancy via ocicli with our tenancy details.
 
   ## Acknowledgements
   * **Authors** -  Iván Postigo, Jesus Guerra, Carlos Olivares - Oracle Spain SE Team
+  * **Contributors** - Jaden McElvey Technical Lead Oracle LiveLabs
   * **Last Updated By/Date** - Tom McGinn, May 2020
 
   See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues). Please include the workshop name and lab in your request.

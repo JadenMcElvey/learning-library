@@ -1,4 +1,4 @@
-# Create a Kubernetes Cluster**
+# Create a Kubernetes Cluster
 
 ## Before You Begin
 
@@ -83,6 +83,7 @@ In this lab you will create a Kubernetes Cluster to deploy the microservices you
 
 ## Acknowledgements
 * **Authors** -  Iván Postigo, Jesus Guerra, Carlos Olivares - Oracle Spain SE Team
+* **Contributors** - Jaden McElvey Technical Lead Oracle LiveLabs
 * **Last Updated By/Date** - Tom McGinn, April 2020
 
 See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues). Please include the workshop name and lab in your request.
