@@ -9,7 +9,7 @@ Use the Desktop icons to start editors and terminal windows.
 ### Acknowledgements
 
 * **Author** - Christopher Jones
-* **Contributors** - Jaden McElvey Technical Lead Oracle LiveLabs
+* **Contributors** - Jaden McElvey, Technical Lead, Oracle LiveLabs Interns
 * **Last Updated By/Date** - Troy Anthony, DB Product Management, June 2020
 
 See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 
