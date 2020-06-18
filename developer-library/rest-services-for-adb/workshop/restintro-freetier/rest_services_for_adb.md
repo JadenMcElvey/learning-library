@@ -35,24 +35,24 @@ It is not good practice to use a SYS or SYSTEM user to create an application's t
     ALTER USER thor QUOTA UNLIMITED ON DATA; -- this part is important if you want to do INSERTs
 
     BEGIN -- this part is so you can login as THOR via SQL Developer Web
-        ords_admin.enable_schema (
-            p_enabled               => TRUE,
-            p_schema                => 'THOR',
-            p_url_mapping_type      => 'BASE_PATH',
-            p_url_mapping_pattern   => 'got', -- this flag says, use 'got' in the URIs for THOR
-            p_auto_rest_auth        => TRUE   -- this flag says, don't expose my REST APIs
-        );
-        COMMIT;
+    ords_admin.enable_schema (
+        p_enabled               => TRUE,
+        p_schema                => 'THOR',
+        p_url_mapping_type      => 'BASE_PATH',
+        p_url_mapping_pattern   => 'got', -- this flag says, use 'got' in the URIs for THOR
+        p_auto_rest_auth        => TRUE   -- this flag says, don't expose my REST APIs
+    );
+    COMMIT;
     END;
     /
     </copy>
     ````
-    *p_url_mapping_pattern* acts as a schema-alias (so schema names are not exposed) and will be used in URIs where the username would normally appear
+    `p_url_mapping_pattern` acts as a schema-alias (so schema names are not exposed) and will be used in URIs where the username would normally appear
 
-2. Run the statements from SQL Developer Web by copying in to the Worksheet and selecting the *run* arrow:
+2. Run the statements from SQL Developer Web by copying in to the Worksheet and clicking the **Run Script** button:
     ![](../../images/SQLDevWeb-3.png)
 
-The *Script Output* tab at the bottom of the screen shows the result of the SQL commands
+The **Script Output** tab at the bottom of the screen shows the result of the SQL commands
     ![](../../images/SQLDevWeb-4.png)
 
 3. Login to SQL Developer Web as your new user, THOR, using an alias similar to:
