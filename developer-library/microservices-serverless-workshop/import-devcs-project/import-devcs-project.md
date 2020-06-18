@@ -1,7 +1,22 @@
 # Importing a Developer Cloud Service Project
 
-## Overview
+## Introduction
 Now that we have a Kubernetes Cluster, let’s move on to next step which is importing a DevCS that contains all the microservices that we will have to deploy in this Kubernetes Cluster.
+
+Estimated time: 10 - 15 min
+
+### Objectives
+
+* Learn how to import a DevCS that contains all the microservices
+
+### Lab Prerequisites
+
+This lab assumes you have completed the following labs:
+* Lab: Sign up for a Free Trial
+* Lab: Provision a DevCS Instance
+* Lab: Build Virtual Machines in Developer Cloud Service
+* Lab: Create a Kubernetes Cluster
+* Lab: Install the Front-end Client
 
 ## **Step 1**: Import a Developer Cloud Service Project
 1. Go to your DevCS instance and in the organization menu, under the projects tab, click **Create**:
