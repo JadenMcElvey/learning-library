@@ -3,7 +3,7 @@
 ## Introduction
 Now that we have a Kubernetes Cluster, let’s move on to next step which is importing a DevCS that contains all the microservices that we will have to deploy in this Kubernetes Cluster.
 
-Estimated time: 10 - 15 min
+Estimated time: 20 - 30 min
 
 ### Objectives
 

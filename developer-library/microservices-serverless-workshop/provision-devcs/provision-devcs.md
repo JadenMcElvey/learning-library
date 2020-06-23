@@ -4,7 +4,7 @@
 
 In this lab you will provision an Oracle Developer Cloud Service instance, gather data from your Oracle Cloud Tenancy and use the data to configure your Developer Cloud Service instance.
 
-Estimated time: 15 - 20 min
+Estimated time: 20 - 30 min
 
 ### Objectives
 
