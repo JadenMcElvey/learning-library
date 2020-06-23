@@ -24,33 +24,25 @@ This lab assumes you have completed the following labs:
 
 ## **Step 1**: Create DNS Zone
 
-1. So let’s create a couple of DNS Zones. These will be used later to modify DNSZONE parameter in project. In OCI Dashboard Menu go to: **Networking \> DNS Zone Management**
+1. So let’s create a couple of DNS Zones. These will be used later to modify the DNSZONE parameter in project. In the OCI Dashboard Menu go to **Networking \> DNS Zone Management**.
 
   ![](./images/image112.png " ")
 
-2. If not selected yet, select Compartment we created in List Scope Area. Then, click **Create Zone**:
+2. If not selected yet, select the compartment we created earlier in the workshop. Then, click **Create Zone**.
 
   ![](./images/image113.png " ")
 
-3. And create a Manual Zone of type Primary named `hol5967` (for example ) and your username.com:
+3. And create a Manual Zone of type Primary named `hol5967` (for example ) and your username.com. If your username contains an @ do not type the @.The zone name should be `hol5967-USERNAME.com`.
 
-	````
-	hol5967-carlos.j.olivares.com
-	````
-
-4. Then click **Submit**:
+4. Then click **Create**:
 
   ![](./images/image114.png " ")
 
   ![](./images/image115.png " ")
 
-5. You have to create a second DNS zone with same parameters but named like previous one prefixed with `front-`:
+5. Repeat steps 1-4 to create a second DNS zone. Use the same parameters but add `front-` to the beginning of the zone name. The zone name should be `front-USERNAME.com`.
 
-	````
-	front-hol5967-carlos.j.olivares.com
-	````
-
-6. You should have a DNS Zone Management like this:
+6. Your DNS zone management page should look like this.
 
   ![](./images/image116.png " ")
 
@@ -74,37 +66,29 @@ In this project we have three types of builds, one for Fn Function (Serverless) 
 
   ![](./images/image120.png " ")
 
-4. Then Select Parameter and add your tenancy parameters:
+4. Then select parameter and add your tenancy parameters. In the section named COMPARTMENTID paste your Compartment OCID. In the section named APIURL enter `https://functions.<YOUR-REGION>.oraclecloud.com`. In the section named OCIRSTORAGE enter `<OBJECT-STORAGE-NAMESPACE>/wedodevops`. For the OCIR section you will need to get the location of your region's OCIR server. Go [here](https://docs.cloud.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) and copy the URL from your region. Record your OCIR because you will need it on the next step.
+
+  ![](./images/image111.png " ")
 
   ![](./images/image121.png " ")
 
-5. Finally select Steps tab and enter details with my tenancy details:
+5. Finally select the steps tab and enter your tenancy details.
+  
+  Your registry host is your OCIR. For your docker login your username is `<object storage namespace>/<OCI tenancy user>`. Your password is the auth token for your user(you should have recorded this in a text file in an earlier lab).
 
-  Remember that for Docker Login you have to enter as user:
+  In the OCIcli section paste your User OCID, Fingerprint, Tenancy OCID, and Private Key in the cooresponding section. You should have recorded all of these in a previous lab. Set your region to your home region.
 
-	````
-	<object storage namespace>/<OCI tenancy user>
-	````
+  For the FN OCI section your oracle compartment should be your compartment OCID(recorded in an earlier lab). Your passphrase should be `''`(two single qotes). This syntax signifies that your password is empty.
 
-6. And password is:
-
-	````
-	Authtoken for OCI Tenancy user
-	````
-
-7. Also for Fn OCI section our Passphrase is empty. This has to be reflected as two single quotation marks:
-
-	````
-	''
-	````
-
-8. Finally check Unix Shell and modify it accordingly with your tenancy details:
+  Lastly scroll down to the Unix Shell section. Replace `$COMPARTMENTID` with your compartment OCID. Replace `$APIURL` with the same API URL from the parameters page. Replace both `$OCIR` with your OCIR(you found this on the last step). Replace `$OCIRSTORAGE` with `<OBJECT-STORAGE-NAMESPACE>/wedodevops`.
 
   ![](./images/image122.png " ")
 
   ![](./images/image123.png " ")
 
-  Please don’t forget to click Save button.
+  Please don’t forget to click the save button.
+
+*JADEN PICK UP HERE ON MONDAY*
 
 ### Docker Jobs modification
 
