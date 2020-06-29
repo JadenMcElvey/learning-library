@@ -50,10 +50,10 @@ It is not good practice to use a SYS or SYSTEM user to create an application's t
     `p_url_mapping_pattern` acts as a schema-alias (so schema names are not exposed) and will be used in URIs where the username would normally appear
 
 2. Run the statements from SQL Developer Web by copying in to the Worksheet and clicking the **Run Script** button.
-    ![](../../images/SQLDevWeb-3.png)
+    ![](../images/SQLDevWeb-3.png)
 
 The **Script Output** tab at the bottom of the screen shows the result of the SQL commands
-    ![](../../images/SQLDevWeb-4.png)
+    ![](../images/SQLDevWeb-4.png)
 
 3. Next you will need to login to SQL Developer Web as your new user, `THOR`. Go to SQL Developer Web and copy the URL. The URL should look similar to the text below. **IDENTIFIER** will be your unique system-assigned identifier. **DBNAME** is the name of your database. **REGION** is your account region. 
 
@@ -65,7 +65,7 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     ````
     <copy>Mjolnir123NotAGoodPasswd</copy>
     ````
-    ![](../../images/SQLDevWeb-1b.png)
+    ![](../images/SQLDevWeb-1b.png)
 
 ## Step 2 Build a simple GET handler
 
@@ -86,7 +86,7 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     INSERT INTO runes (id, message) VALUES (5, 'He''s a friend from work!');
     </copy>
     ````
-    ![](../../images/SQLDevWeb-5.png)
+    ![](../images/SQLDevWeb-5.png)
 
     The **Script Output** tab will show:
     ````
@@ -155,7 +155,7 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     </copy>
     ````
 
-    ![](../../images/SQLDevWeb-6.png)
+    ![](../images/SQLDevWeb-6.png)
 
     The **Script Output** tab will show:
     ````
@@ -172,7 +172,7 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     ````
     https://IDENTIFIER-DBNAME.adb.REGION.oraclecloudapps.com/ords/got/test/itaot/
     ````
-    ![](../../images/SQLDevWeb-7.png)
+    ![](../images/SQLDevWeb-7.png)
 
 4. Protect the Module with an ORDS privilege
     You should have noticed that you did not provide an OAUTH token or even any user credentials to use that handler.
@@ -200,10 +200,10 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     </copy>
     ````
 
-    ![](../../images/SQLDevWeb-9.png)
+    ![](../images/SQLDevWeb-9.png)
 
     With this privilege in place try to access *test* again.
-    ![](../../images/SQLDevWeb-8.png)
+    ![](../images/SQLDevWeb-8.png)
 
     *Note: If you are logged in as THOR to SQLDeveloper via your browser you are authenticated. You used the role 'SQL Developer' which is an ORDS role assigned to any Database User Authenticated session. If you are not seeing the "401 Unathorized" error, try a different browser, private window, or use a REST client like Insomnia from Google.*
 
@@ -222,11 +222,11 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     https://IDENTIFIER-DBNAME.adb.REGION.oraclecloudapps.com/ords/got/oauth/clients/
     ````
     If you are logged out or in a different browser, you may be informed that access is restricted and you are unauthorized. Login as THOR to access the client authorization function.
-    ![](../../images/SQLDevWeb-OAUTH-4a.png)
+    ![](../images/SQLDevWeb-OAUTH-4a.png)
 
 2. Click **New Client**
 
-    ![](../../images/SQLDevWeb-OAUTH-1.png)
+    ![](../images/SQLDevWeb-OAUTH-1.png)
 
     and enter the following information.
 
@@ -255,15 +255,15 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     <copy>SQL Developer</copy>
     ````
 
-    ![](../../images/SQLDevWeb-OAUTH-2a.png)
+    ![](../images/SQLDevWeb-OAUTH-2a.png)
 
 3. Click **Create** to create the client.
     The client will have a **client id** and an **authorization URL**. The **unique value** or **state** should be a unique, unguessable value that the client remembers, and can use later to confirm that the redirect received from Oracle REST Data Services is in response to this authorization request. This value is used to prevent Cross Site Request Forgery attacks; it is very important, cannot be omitted, and must not be guessable or discoverable by an attacker.
 
 4. Click **Edit** to retrieve the **client id**, **authorization URL** and the **unique value**
-    ![](../../images/SQLDevWeb-OAUTH-3b.png)
+    ![](../images/SQLDevWeb-OAUTH-3b.png)
 
-    ![](../../images/SQLDevWeb-OAUTH-3a.png)
+    ![](../images/SQLDevWeb-OAUTH-3a.png)
 
 5. In a browser, enter the Autorization URL retrieved from the Test Client. The URL should look similar to the URL below.
 
@@ -272,18 +272,18 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     ````
     *Note: The Autorization URL shown here will not resolve. You must use the URL obtained in Step 4 above*
 6. Sign in as THOR to approve this request.
-    ![](../../images/SQLDevWeb-OAUTH-4a.png)
+    ![](../images/SQLDevWeb-OAUTH-4a.png)
 
 7. Approve the request.
 
-    ![](../../images/SQLDevWeb-OAUTH-5.png)
+    ![](../images/SQLDevWeb-OAUTH-5.png)
 
     The browser will redirect to a URL similar to.
     ````
     http://example.org/redirect#token_type=bearer&access_token=-i_Ows8j7JYu0p07jOFMEA..&expires_in=3600
     ````
     and send you to an example site with this message
-    ![](../../images/SQLDevWeb-OAUTH-7.png)
+    ![](../images/SQLDevWeb-OAUTH-7.png)
 
     When registering the OAuth client, you specified http://example.org/redirect as the Redirect URI. On completion of the approval request, the browser is redirected to this registered redirect URI. Appended to the URI is the information about the access token that was generated for the approval.
 
@@ -302,11 +302,11 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
 
 1. Lastly we are going to send an authorized request. You can use any REST Client, but we are going to use Insomnia for this example. Download Insomnia Core [here](https://insomnia.rest/download/).
 
-    ![](../../images/SQLDevWeb-OAUTH-8.png)
+    ![](../images/SQLDevWeb-OAUTH-8.png)
 
 2. Open Insomnia and enter `Ctrl+N` to create a new request. When prompted enter `testRequest` for the **Name** and select **GET** as the request type.
 
-    ![](../../images/SQLDevWeb-OAUTH-9.png)
+    ![](../images/SQLDevWeb-OAUTH-9.png)
 
 3. Enter the URL you used in Step 2 to access the test table. The URL should be in the format below.
 
@@ -314,15 +314,15 @@ The **Script Output** tab at the bottom of the screen shows the result of the SQ
     https://IDENTIFIER-DBNAME.adb.REGION.oraclecloudapps.com/ords/got/test/itaot/
     ````
 
-    ![](../../images/SQLDevWeb-OAUTH-10.png)
+    ![](../images/SQLDevWeb-OAUTH-10.png)
 
 4. Select **Bearer Token** as the **Auth** type.
 
-    ![](../../images/SQLDevWeb-OAUTH-11.png)
+    ![](../images/SQLDevWeb-OAUTH-11.png)
 
 5. Paste the access token from Step 4 into the **TOKEN** field and click **Send**. You should see the response on the right.
 
-    ![](../../images/SQLDevWeb-OAUTH-6.png)
+    ![](../images/SQLDevWeb-OAUTH-6.png)
 
     After an access token has been acquired, the client application must remember the access token and include it with every request to the protected resource. The access token must be included in the HTTP Authorization request header (explained at http://tools.ietf.org/html/rfc2616#section-14.8).
 
