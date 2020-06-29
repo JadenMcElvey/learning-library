@@ -1,15 +1,45 @@
-## Create the tables and insert data
+# Create the tables and insert data
 
-Open the correct URL for SQlDevWeb for the Customer_360 user. It is almost the same URL as the one for the Admin user execpt that `admin` in that url is replaced with the schema-alias we provided, i.e. with `c360`.
+## Introduction
 
-Login as `CUSTOMER_360` using the password you entered when creating the user.
+## Step 0: Log in to SQLDevWeb as user c360
+1. Open the correct URL for SQlDevWeb for the CUSTOMER_360 user. It is almost the same URL as the one for the Admin user execpt that `admin` in that url is replaced with the schema-alias we provided, i.e. with `c360`.
 
-![Login as Customer_360](../images/ADB_SDW_LoginAsC360.png)
+  ![](../images/admin_url.png " ")
 
-![Connected as Customer_360](../images/ADB_SDW_ConnectedAsC360.png)
+2. Login as `CUSTOMER_360` using the password you entered when creating the user.
+    
+  *Note: The password should be `Welcome1_C360` if you followed Step 1.2 in Lab 5 exactly.*
 
-### Drop existing tables if any
-To ensure a clean slate drop any existing tables. Copy, paste, and execute the following commands into the SQL Worksheet.
+  ![Login as Customer_360](../images/ADB_SDW_LoginAsC360.png " ")
+
+  ![Connected as Customer_360](../images/ADB_SDW_ConnectedAsC360.png " ")
+
+### Troubleshooting
+  If you receive a *Service Unavailable* error, it may be caused by the fact that the user c360 is locked.
+    ![](../IMAGES/troubleshooting_login.png " ")
+
+  You can try the following steps:
+   1. Log in as ADMIN, enter and run the command in Worksheet:
+    ```
+    <copy>select username, account_status from dba_users ;</copy>
+    ```
+
+    In Query Result, check the account status of `CUSTOMER_360`. The status should be `OPEN`.
+    ![](../images/troubleshoot_query_result.png " ")
+
+    2. If the status is `LOCKED`, enter and run the command to unlock the user:
+    ```
+    <copy>alter user CUSTOMER_360 account unlock</copy>
+    ```
+
+    3. Then, the status should change to `OPEN`. You can check again using command:
+    ```
+    <copy>select username, account_status from dba_users ;</copy>
+    ```
+
+## STEP 1: Drop existing tables if any
+1. To ensure a clean slate drop any existing tables. Copy, paste, and execute the following commands into the SQL Worksheet.
 
 ```
 <copy>
@@ -26,9 +56,9 @@ DROP TABLE transfer;
 
 ![Drop existing tables](../images/ADB_SDW_C360_DropTables.png)
 
-### Create and populate the Account table
+## STEP 2: Create and populate the Account table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -53,9 +83,9 @@ COMMIT;
 
 ![Create Account table](../images/ADB_SDW_C360_CreateAccountTable.png)
 
-### Create and populate the Customer table
+## STEP 3: Create and populate the Customer table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -80,9 +110,9 @@ COMMIT;
 
 ![Create Customer table](../images/ADB_SDW_C360_CreateCustomerTable.png)
 
-### Create and populate the Merchant table 
+## STEP 4: Create and populate the Merchant table 
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -106,9 +136,9 @@ COMMIT;
 
 ![Create Merchant table](../images/ADB_SDW_C360_CreateMerchantTable.png)
 
-### Create and populate the Owned_By table
+## STEP 5: Create and populate the Owned_By table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -128,9 +158,9 @@ COMMIT;
 
 ![Create owned_by table](../images/ADB_SDW_C360_CreateOwnedByTable.png)
 
-### Create and populate the Parent_Of table
+## STEP 6: Create and populate the Parent_Of table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -145,9 +175,9 @@ COMMIT;
 ```
 
 
-### Create and populate the Purchased table
+## STEP 7: Create and populate the Purchased table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 ```
 <copy>
@@ -174,9 +204,9 @@ COMMIT;
 
 ![Create purcahsed table](../images/ADB_SDW_C360_CreatePurchasedTable.png)
 
-### Create and populate the Transfer table
+## STEP 8: Create and populate the Transfer table
 
-Clear the SQL Worksheet and copy, paste, and run the following SQL script.
+1. Clear the SQL Worksheet and copy, paste, and run the following SQL script.
 
 The quotes are needed since DATE is a reserved word.
 
@@ -201,3 +231,13 @@ COMMIT;
 </copy>
 ```
 ![Create transfer table](../images/ADB_SDW_C360_CreateTransferTable.png)
+
+## Acknowledgements ##
+
+- **Author** - Jayant Sharma - Product Manager, Spatial and Graph.  
+  With a little help from colleagues (Albert Godfrind and Ryota Yamanaka).  
+  Thanks to Jenny Tsai for helpful, constructive feedback that improved this workshop.
+
+- **Last Updated By/Date** - Arabella Yao, Product Manager Intern, Database Management, June 2020
+
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.
