@@ -11,7 +11,7 @@ In Oracle Autonomous Database databases, the ADMIN user is pre-enabled for SQL D
 1. From the ADB Details page, select the Tools tab
 ![](./images/ADB-details-1.png)
 
-2. The Tools page provides you access to SQL Developer Web, Oracle Application Express, and Oracle ML User Administration. In the SQL Developer Web box, click *Open SQL Developer Web*.
+2. The Tools page provides you access to SQL Developer Web, Oracle Application Express, and Oracle ML User Administration. In the SQL Developer Web box, click **Open SQL Developer Web**.
 ![](./images/ADB-details-2.png)
 
 3. A sign in page opens for SQL Developer Web. Sign in with the database instance's default administrator account, ADMIN, with the admin password you specified when creating the database. Click Sign in.
@@ -21,11 +21,12 @@ In Oracle Autonomous Database databases, the ADMIN user is pre-enabled for SQL D
 ![](./images/SQLDevWeb-2.png)
 
 ## Conclusion
- You are now connected to your Autonomous Database using SQL Developer Web .
+ You are now connected to your Autonomous Database using SQL Developer Web.
 
 ## Acknowledgements
 
  - **Author** - Troy Anthony, May 2020
+ - **Contributors** - Jaden McElvey, Technical Lead - Oracle LiveLabs Intern
  - **Last Updated By/Date** - Troy Anthony, May 20 2020
 
   See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.
