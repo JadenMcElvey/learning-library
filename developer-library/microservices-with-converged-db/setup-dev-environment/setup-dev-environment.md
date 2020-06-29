@@ -1,7 +1,9 @@
 # Setup OCI, OKE, ATP and Cloud shell
 ## Introduction
 
-This 25-minute lab will show you how to setup the Oracle Cloud Infrastructure Container Engine for Kubernetes for creating and deploying a front-end helidon application which accesses in the backend the Oracle Autonomous Database.
+This lab will show you how to setup the Oracle Cloud Infrastructure Container Engine for Kubernetes for creating and deploying a front-end helidon application which accesses in the backend the Oracle Autonomous Database.
+
+Estimate Time: 30-45 Minutes
 
 ### Objectives
 

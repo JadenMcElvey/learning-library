@@ -6,6 +6,8 @@ This lab will show you how to build images, push them to Oracle Cloud
 Infrastructure Registry and deploy the microservices on our Kubernetes cluster.
 You will also clone a GitHub repository.
 
+Estimate Time: 30-45 Minutes
+
 ### Objectives
 
   -   Clone a GitHub repository

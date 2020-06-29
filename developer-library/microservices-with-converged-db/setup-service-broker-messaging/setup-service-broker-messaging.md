@@ -7,6 +7,8 @@ Broker and bind it to the two existing Autonomous Transaction Processing
 databases. This way we will be able to connect the OKE Helidon microservices to
 the ATP instances.
 
+Estimate Time: 45-75 Minutes
+
 ![](images/veggie-dash-app-arch.png " ")
 
 ### Objectives

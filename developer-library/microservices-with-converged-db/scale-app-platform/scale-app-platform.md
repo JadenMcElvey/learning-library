@@ -6,6 +6,8 @@ This lab will show you how Helidon works with OKE health probes for liveness and
 readiness. You will also monitor the microservices performance, perform
 horizontal pod scaling and configure tracing with Jaeger.
 
+Estimate Time: 15-30 Minutes
+
 ### Objectives
 
 - Measure health and readiness of microservices
