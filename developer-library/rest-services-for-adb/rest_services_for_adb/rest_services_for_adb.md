@@ -21,6 +21,8 @@ You have several development interfaces available, including:
 
 In this lab you will use the SQL Developer Web browser-based tool, connect to your Autonomous Database and REST enable tables and views and/or develop custom RESTful Services based on your SQL and PL/SQL code.
 
+Estimated Time: 30-45 minutes
+
 ## Step 1 Create a user for Application Development
 It is not good practice to use a SYS or SYSTEM user to create an application's tables, and neither is it good practice to use the ADMIN account to create applications.
 
