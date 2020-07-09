@@ -1,4 +1,4 @@
-# Create an App from a Spreadsheet
+# Create an APEX App from a Spreadsheet
 
 ## Introduction
 
