@@ -1,4 +1,4 @@
-# Defining List of Values
+# Defining a List of Values
 
 ## Introduction
 In this lab, you will learn how to utilize Web Source modules as the basis for list of values for use within an application.
