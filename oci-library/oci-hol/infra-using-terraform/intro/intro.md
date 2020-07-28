@@ -1,6 +1,8 @@
 # Introduction
 ## Introduction
-Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI). This workshop involves multiple components of the Oracle Cloud including the OCI Load Balancing Service, Networking, Compute and Oracle Cloud Shell.  
+Get hands-on learning with training labs about Oracle cloud solutions. The workshops featured cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI). This workshop involves multiple components of the Oracle Cloud including the OCI Load Balancing Service, Networking, Compute and Oracle Cloud Shell. 
+
+Estimated Time: 60-90 minutes
 
 ### Terraform
 
