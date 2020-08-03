@@ -246,13 +246,13 @@ Autonomous Database page provide the following basic information and click **Cre
     -   Workload type: `Transaction Processing`
     -   Deployment type: `Shared Infrastructure`
     -   Leave the defaults for version, OCPU count and Storage
-    -   Leave Auto scaling on
+    -   Leave Auto scaling: off
     -   Provide the admin password - *Note: do not use special characters in the password, instead use integers and upper and lower case characters.*
     -   Leave the defaults for network access, which is “Allow secure access from
         everywhere”
     -   License type: `License included`
 
-  ![](images/37-create-atp2.png " ")
+  ![](images/37-create-atp3.png " ")
 
 4. It will take a couple of minutes for the database to be provisioned, in the
 meantime you can proceed to create the second ATP instance. Click the Autonomous
@@ -331,7 +331,7 @@ and running.
 You may proceed to the next lab.
 
 ## Acknowledgements
-* **Author** - Paul Parkinson, Consulting Member of Technical Staff
+* **Author** - Paul Parkinson, Dev Lead for Data and Transaction Processing, Oracle Microservices Platform, Helidon
 * **Adapted for Cloud by** -  Nenad Jovicic, Enterprise Strategist, North America Technology Enterprise Architect Solution Engineering Team
 * **Contributors** - Jaden McElvey, Technical Lead - Oracle LiveLabs Intern
 * **Last Updated By/Date** - Tom McGinn, June 2020
